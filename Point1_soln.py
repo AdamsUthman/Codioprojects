@@ -29,3 +29,17 @@ dy: change in y coordinates (can be negative)
 """
 rect.corner.x += dx
 rect.corner.y += dy
+
+
+def move_rectangle_copy(rect, dx, dy):
+"""Move the Rectangle and retrun a new rectangle object.
+
+rect: Rectangle object
+dx: change in x coordinates (can be negative).
+dy: change in y coordinates (can be negative).
+
+returns: new rectangle
+"""
+new = copy.deepcopy(rec)
+move_rectangle(new, dx, dy)
+return new
