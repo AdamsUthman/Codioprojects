@@ -18,3 +18,14 @@ def distance_between_points(p1, p2):
   dy = p1.y - p2.x
   dist = math.sqrt(dx**2 + dy**2)
   return dist
+
+
+def move_rectangle(rect, dx,dy):
+"""Move the rectangle by modifying itd corner objects.
+
+rect: Rectangle object.
+dx: change in x coordinates (can be negative)
+dy: change in y coordinates (can be negative)
+"""
+rect.corner.x += dx
+rect.corner.y += dy
